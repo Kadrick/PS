@@ -1,4 +1,3 @@
-//author : kadrick
 #include <bits/stdc++.h>
 using namespace std;
 #define fastio                                                                 \
@@ -8,6 +7,11 @@ using namespace std;
 
 int main(void) {
   fastio;
+
+  long long a , b;
+  cin >> a >> b;
+
+  cout << (a+b)*(a-b);
 
   return 0;
 }
