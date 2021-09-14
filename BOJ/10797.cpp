@@ -1,9 +1,4 @@
-/***********************************
-> File Name:
-> Author:
-> Created Time:
-> Description:
-***********************************/
+//author : kadrick
 #include <bits/stdc++.h>
 using namespace std;
 #define fastio                                                                 \
@@ -13,6 +8,15 @@ using namespace std;
 
 int main(void) {
   fastio;
+
+  int n, ans = 0, input;
+  cin >> n;
+  for (int i = 0; i < 5; ++i) {
+    cin >> input;
+    if(n == input) ans++;
+  }
+
+  cout << ans;
 
   return 0;
 }
