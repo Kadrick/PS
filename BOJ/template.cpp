@@ -1,9 +1,13 @@
-/***********************************
-> File Name:
-> Author: Kadrick, BoGwon Kang
-> Created Time:
-> Description:
-***********************************/
+/**
+ * @file template.cpp
+ * @author kadrick (kbk2581553@gmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-11-18 16:29
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <bits/stdc++.h>
 using namespace std;
 #define fastio                                                                 \
