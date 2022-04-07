@@ -1,12 +1,12 @@
 /**
  * @file 10217.cpp
  * @author your name (you@domain.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2022-04-07 16:40
- * 
+ *
  * @copyright Copyright (c) 2022
- * 
+ *
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -50,7 +50,13 @@ int dijkstra(int &start, int &end, int &money, vector<vector<EDGE>> &graph)
 
       if (next.time + time < dist[next.target][next.cost + pay])
       {
-        dist[next.target][next.cost + pay] = next.time + time;
+        for (int i = next.cost + pay; i <= money; i++)
+        {
+          if (dist[next.target][i] > dist[pos][i - next.cost] + next.time)
+              dist[next.target][i] = dist[pos][i - next.cost] + next.time;
+          else
+            break;
+        }
         pq.push({-(next.time + time), {next.target, next.cost + pay}});
       }
     }
