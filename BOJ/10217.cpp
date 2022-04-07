@@ -1,12 +1,12 @@
 /**
  * @file 10217.cpp
- * @author your name (you@domain.com)
- * @brief
+ * @author kadrick (kbk2581553@gmail.com)
+ * @brief dijkstra
  * @version 0.1
- * @date 2022-04-07 16:40
- *
+ * @date 2022-04-07
+ * 
  * @copyright Copyright (c) 2022
- *
+ * 
  */
 #include <bits/stdc++.h>
 using namespace std;
