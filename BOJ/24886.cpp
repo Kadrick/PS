@@ -68,7 +68,7 @@ int main(void)
   ans += min(shcnt, kcap);
   kcap -= min(shcnt, kcap);
 
-  // hk, sk, sh 붙이기
+  // kh, sk, sh 붙이기
   int addv = 0;
 
   int up = min({scnt, kcap, hcap});
