@@ -15,7 +15,6 @@ import (
 	"fmt"
 	"math"
 	"os"
-	"sort"
 	"strconv"
 )
 
@@ -40,7 +39,7 @@ func max(a, b int) int {
 //////////////////////////////////////////////////////////////
 
 var scanner = bufio.NewScanner(os.Stdin)
-var print = bufio.NewWriter(os.Stdout)
+var stdout = bufio.NewWriter(os.Stdout)
 
 func nextInt() int {
 	scanner.Scan()
@@ -49,15 +48,22 @@ func nextInt() int {
 	return v
 }
 
+func nextString() string {
+    scanner.Scan()
+	text := scanner.Text()
+    return text
+}
+
 //////////////////////////////////////////////////////////////
 
-var n int
+var ans int
 
 func main() {
 	scanner.Split(bufio.ScanWords)
-	defer print.Flush()
+	defer stdout.Flush()
 
-	n = nextInt()
+	ans = nextInt()
+    fmt.Fprintf(stdout, "%d\n", ans)
 
 	return
 }
