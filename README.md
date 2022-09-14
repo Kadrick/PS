@@ -15,4 +15,6 @@ problem solving every day Since 2021-05-08
 Solving 100 problems per [level](https://solved.ac/problems/level)  
 Since 2022-09-14
 
-Gold 5 - (1 / 100)
+[Solved List](./BOJ/doc/solvedProblem.md)
+
+Gold 5 - (2 / 100)
