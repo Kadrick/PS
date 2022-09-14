@@ -1,0 +1,81 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define fastio                                                                 \
+  ios::sync_with_stdio(false);                                                 \
+  cin.tie(0);
+#define endl '\n'
+
+vector<string> dp;
+
+string add(string a, string b) {
+  string ret;
+  int carry = 0;
+  while (!a.empty() && !b.empty()) {
+    int backA = a.back() - '0';
+    a.pop_back();
+    int backB = b.back() - '0';
+    b.pop_back();
+    ret.push_back((backA + backB + carry) % 10 + '0');
+    carry = (backA + backB + carry) / 10;
+  }
+  if (a.empty() && b.empty()) {
+    if (carry)
+      ret.push_back(carry + '0');
+  } else if (a.empty()) {
+    while (!b.empty()) {
+      int backB = b.back() - '0';
+      b.pop_back();
+      ret.push_back((backB + carry) % 10 + '0');
+      carry = (backB + carry) / 10;
+    }
+    if (carry)
+      ret.push_back(carry + '0');
+  } else if (b.empty()) {
+    while (!a.empty()) {
+      int backA = a.back() - '0';
+      a.pop_back();
+      ret.push_back((backA + carry) % 10 + '0');
+      carry = (backA + carry) / 10;
+    }
+    if (carry)
+      ret.push_back(carry + '0');
+  }
+
+  for (int i = 0; i < ret.size() / 2; ++i) {
+    int tmp = ret[i];
+    ret[i] = ret[ret.size() - 1 - i];
+    ret[ret.size() - 1 - i] = tmp;
+  }
+
+  return ret;
+}
+
+string solve(int n) {
+  if (n == 2 || n == 1 || n == 0) {
+    return dp[n];
+  }
+
+  string &ret = dp[n];
+  if (ret != "")
+    return ret;
+
+  ret = add(solve(n - 1), solve(n - 2));
+  ret = add(ret, solve(n - 2));
+  return ret;
+}
+
+int main(void) {
+  fastio;
+
+  dp.resize(251, "");
+  dp[0] = "1";
+  dp[1] = "1";
+  dp[2] = "3";
+
+  int n;
+  while (cin >> n) {
+    cout << solve(n) << endl;
+  }
+
+  return 0;
+}
