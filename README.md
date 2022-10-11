@@ -18,7 +18,7 @@ Since 2022-09-14
 [Solved List](./BOJ/doc/solvedProblem.md)
 
 Gold 5 - (7 / 100)  
-Gold 4 - (1 / 100)  
+Gold 4 - (2 / 100)  
 Gold 3 - (1 / 100)  
 Gold 2 - (2 / 100)  
 Gold 1 - (1 / 100)  
