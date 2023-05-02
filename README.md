@@ -19,10 +19,10 @@ Since 2022-09-14
 
 Gold 5 - (22 / 100)  
 Gold 4 - (11 / 100)  
-Gold 3 - (8 / 100)  
+Gold 3 - (9 / 100)  
 Gold 2 - (2 / 100)  
 Gold 1 - (5 / 100)  
 Platinum 5 - (6 / 100)  
 Platinum 4 - (1 / 100)  
 Platinum 3 - (3 / 100)  
-Platinum 2 - (1 / 100)  
+Platinum 2 - (1 / 100)
